@@ -1,4 +1,5 @@
 # Miscellaneous
+*.env
 *.class
 *.log
 *.pyc
@@ -26,6 +27,9 @@ migrate_working_dir/
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
+
+# Node.js related
+**/node_modules/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
