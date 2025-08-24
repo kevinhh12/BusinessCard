@@ -1,3 +1,4 @@
+import 'package:business_card_pp/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:business_card_pp/main_page.dart';
 
@@ -20,7 +21,10 @@ class BusinessCard extends StatelessWidget {
       ),
 
       initialRoute: '/',
-      routes: {'/': (context) => (MainPage())},
+      routes: {
+        '/': (context) => (MainPage()),
+        '/Login': (context) => (LoginPage()),
+      },
     );
   }
 }

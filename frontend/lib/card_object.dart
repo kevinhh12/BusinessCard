@@ -7,6 +7,7 @@ class BusinessCardModel {
   String? background;
   String? company;
   String? qr;
+  String? cardTemplate;
 
   BusinessCardModel({
     required this.name,
@@ -17,6 +18,7 @@ class BusinessCardModel {
     this.company,
     this.background,
     this.qr,
+    required this.cardTemplate,
   });
 
   Map<String, dynamic> toJson() => {
@@ -29,6 +31,7 @@ class BusinessCardModel {
     'background': background,
     'company': company,
     'qr': qr,
+    'cardTemplate': cardTemplate,
   };
 
   factory BusinessCardModel.fromJson(
@@ -43,5 +46,6 @@ class BusinessCardModel {
     company: json['company'],
     background: json['background'],
     qr: json['qr'],
+    cardTemplate: json['cardTemplate'],
   );
 }

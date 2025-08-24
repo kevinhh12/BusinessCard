@@ -21,6 +21,7 @@ class _BNavigationBarState extends State<BNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.shifting,
       unselectedIconTheme: IconThemeData(color: Colors.grey),
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(

@@ -38,7 +38,7 @@ class _CardTemplate_1State extends State<CardTemplate_1> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
       child: Container(
         height: widget.editable ? 400 : 200,
         decoration: BoxDecoration(
@@ -77,7 +77,7 @@ class _CardTemplate_1State extends State<CardTemplate_1> {
                         }
                       : null,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(16),
                     child: Image.network(
                       widget.data.imagePath ?? kTemplateImage_1,
                       width: 80,

@@ -1,7 +1,10 @@
-import 'package:business_card_pp/HomePage.dart';
-import 'package:business_card_pp/CardTemplate_1.dart';
+import 'package:business_card_pp/home_page.dart';
 import 'package:business_card_pp/navigationBar.dart';
+import 'package:business_card_pp/user_page.dart';
 import 'package:flutter/material.dart';
+import 'dart:ui';
+import 'SearchPage.dart';
+import 'user_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -18,9 +21,9 @@ class _MainPageState extends State<MainPage> {
   );
   static const List<Widget> _widgetOptions = <Widget>[
     Homepage(),
-    Text('Index 1: Business', style: _optionStyle),
+    SearchPage(),
     Text('Index 2: School', style: _optionStyle),
-    Text('Index 3: Settings', style: _optionStyle),
+    UserPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,7 +35,27 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('BusineesCardi')),
+      extendBodyBehindAppBar: true, // 👈 allow content under the AppBar
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10), // Glass blur
+            child: AppBar(
+              backgroundColor: Colors.white.withOpacity(
+                0.3,
+              ), // Semi-transparent
+              elevation: 0,
+              title: const Text('BusinessCardi'),
+              centerTitle: true,
+            ),
+          ),
+        ),
+      ),
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BNavigationBar(
         widgetOptions: _widgetOptions,
