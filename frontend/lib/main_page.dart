@@ -1,10 +1,11 @@
+import 'dart:ui';
+
 import 'package:business_card_pp/home_page.dart';
 import 'package:business_card_pp/navigationBar.dart';
 import 'package:business_card_pp/user_page.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
+
 import 'SearchPage.dart';
-import 'user_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
