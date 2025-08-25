@@ -35,11 +35,6 @@ class _BNavigationBarState extends State<BNavigationBar> {
           label: 'Search',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.apps_rounded),
-          backgroundColor: knavBarItemBackgroundColor,
-          label: 'Category',
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.account_circle_rounded),
           backgroundColor: knavBarItemBackgroundColor,
           label: 'User',

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -63,22 +61,27 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              TextButton(
-                style: TextButton.styleFrom(
+              IconButton(
+                style: IconButton.styleFrom(
+                  backgroundColor: Colors.grey[200],
                   minimumSize: const Size.fromHeight(50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
                 onPressed: () {},
-                child: Row(
+                icon: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      'images/signin-assets/iOS/svg/neutral/ios_neutral_sq_SU.svg',
-
+                    Image.asset(
+                      'images/icons8-google-logo-48.png',
+                      width: 20,
+                      height: 20,
                       fit: BoxFit.contain,
                     ),
+                    SizedBox(width: 10),
+
+                    Text('Sign up with Google', style: TextStyle(fontSize: 16)),
                   ],
                 ),
               ),

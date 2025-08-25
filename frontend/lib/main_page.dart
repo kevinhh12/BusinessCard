@@ -22,7 +22,6 @@ class _MainPageState extends State<MainPage> {
   static const List<Widget> _widgetOptions = <Widget>[
     Homepage(),
     SearchPage(),
-    Text('Index 2: School', style: _optionStyle),
     UserPage(),
   ];
 
